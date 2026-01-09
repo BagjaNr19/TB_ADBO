@@ -12,9 +12,9 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::create([
+        \App\Models\User::updateOrCreate([
             'name' => 'Administrator',
-            'email' => 'admin@pecel-lele.com',
+            'email' => 'admin@ResepMakanan.com',
             'password' => bcrypt('admin123'),
             'role' => 'admin',
             'bio' => 'System Administrator',
