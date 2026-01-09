@@ -89,7 +89,7 @@ class AuthController extends Controller
             ]);
 
             // Redirect based on role
-            if (Auth::user()->isAdmin()) {
+             if (Auth::user()->role === 'admin') {
                 return redirect()->route('admin.dashboard')->with('success', 'Selamat datang, Admin!');
             }
 
